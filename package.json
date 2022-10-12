@@ -1,0 +1,27 @@
+{
+  "type": "module",
+  "name": "continuous-profiler",
+  "version": "0.0.2",
+  "description": "Continuous Profiler that runs inside a browser",
+  "module": "index.js",
+  "repository": "git@github.com:piotr-oles/continuous-profiler.git",
+  "author": "Piotr Oleś <piotrek.oles@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "./index.js",
+    "./index.d.ts",
+    "./index.js.map",
+    "./index.d.ts.map",
+    "./LICENSE",
+    "./README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p ./tsconfig.json",
+    "serve": "serve"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "serve": "^14.0.1",
+    "typescript": "^4.8.4"
+  }
+}
