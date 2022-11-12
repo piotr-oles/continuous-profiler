@@ -4,6 +4,7 @@
   "version": "0.0.2",
   "description": "Continuous Profiler that runs inside a browser",
   "module": "index.js",
+  "sideEffects": false,
   "repository": "git@github.com:piotr-oles/continuous-profiler.git",
   "author": "Piotr Oleś <piotrek.oles@gmail.com>",
   "license": "MIT",
