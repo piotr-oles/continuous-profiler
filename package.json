@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "continuous-profiler",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Continuous Profiler that runs inside a browser",
   "module": "index.js",
   "sideEffects": false,
