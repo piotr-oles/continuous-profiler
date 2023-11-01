@@ -91,7 +91,7 @@ export interface ContinuousProfilerTrace extends ProfilerTrace {
   readonly timeOrigin: number;
 }
 
-interface ContinuousProfilerInitOptions {
+export interface ContinuousProfilerInitOptions {
   /** Sample interval in milliseconds. */
   sampleInterval?: number;
   /** Collect interval in milliseconds. */
