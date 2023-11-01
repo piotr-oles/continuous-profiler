@@ -83,13 +83,15 @@ interface SampleBufferFullEvent extends Event {
 }
 
 export interface ContinuousProfilerTrace extends ProfilerTrace {
-  /** Timestamp in milliseconds when profiler trace started. */
+  /** High resolution time when profiler trace started, relative to the profiling session's time origin */
   readonly start: number;
-  /** Timestamp in milliseconds when profiler trace ended. */
+  /** High resolution time when profiler trace ended, relative to the profiling session's time origin */
   readonly end: number;
+  /** Time origin of the profiling session */
+  readonly timeOrigin: number;
 }
 
-interface ContinuousProfilerInitOptions {
+export interface ContinuousProfilerInitOptions {
   /** Sample interval in milliseconds. */
   sampleInterval?: number;
   /** Collect interval in milliseconds. */
@@ -196,8 +198,9 @@ export class ContinuousProfiler {
       const end = performance.now();
       this.callback(
         Object.assign(trace, {
-          start: performance.timeOrigin + start,
-          end: performance.timeOrigin + end,
+          start,
+          end,
+          timeOrigin: performance.timeOrigin
         })
       );
     });
